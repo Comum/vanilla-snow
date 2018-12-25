@@ -40,7 +40,7 @@ class Snow {
 
         document.body.appendChild(this.canvas);
 
-        window.addEventListener("resize", () => this.onResize);
+        window.addEventListener("resize", this.onResize.bind(this));
         this.onResize();
 
         this.updateBound = this.update.bind(this);
@@ -50,6 +50,7 @@ class Snow {
     }
 
     onResize() {
+        console.log('aui');
         this.width = window.innerWidth;
         this.height = window.innerHeight;
         this.canvas.width = this.width;
