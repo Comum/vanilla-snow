@@ -50,7 +50,6 @@ class Snow {
     }
 
     onResize() {
-        console.log('aui');
         this.width = window.innerWidth;
         this.height = window.innerHeight;
         this.canvas.width = this.width;
